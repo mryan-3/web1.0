@@ -39,6 +39,13 @@
 		width: 100%;
 		padding: 48px;
 	  }
+	  .tapp-section1 {
+		display:grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto;
+		margin: top 10px; ;
+		
+	  }
 
 	  .tapp-section-background {
 		background-size: cover;
@@ -317,17 +324,30 @@
 		justify-content: center;
 		background-color: var(--tapp-section-text, #000);
 	 }
+	 li{
+		list-style: none;
+	  }
+	  a{
+		color: white;
+		text-decoration: none;
+	  }
 
 	 .tapp-site-navbar {
 		width: 100%;
-		min-height: 54px;
-		padding: 12px 32px;
+		min-height: 70px;
+		padding: 0 24px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		background-color: var(--tapp-theme-primary);
+		background-color: #262626;
 		color: var(--tapp-theme-secondary);
 		font-family: var(--tapp-theme-font);
+	 }
+	 .nav-menu{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 60px;
 	 }
 
 	 .tapp-site-navbar-container {
@@ -337,8 +357,9 @@
 	 }
 
 	 .tapp-site-navbar-title {
-		font-size: 18px;
+		font-size: 2rem;
 		font-weight: 600;
+		color: white;
 	 }
 
 	 .tapp-site-navbar-pages {
@@ -354,10 +375,56 @@
 	 }
 
 	 .tapp-site-navbar-pages-button {
-		text-decoration: none;
-		color: var(--tapp-theme-secondary);
-		font-size: 14px;
+		transition: 0.7s ease;;
 	 }
+	 .tapp-site-navbar-pages-button:hover{
+		color: dodgerblue;
+	 }
+	 .hamburger{
+		display: none;
+		cursor: pointer;
+	 }
+	 .bar{
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		background-color: white;
+	 }
+	 @media(max-width:768px){
+		.hamburger{
+			display: block;
+		}
+		.hamburger.active .bar:nth-child(2){
+			opacity: 0;
+		}
+		.hamburger.active .bar:nth-child(1){
+			transform: translateY(8px) rotate(45deg);
+		}
+		.hamburger.active .bar:nth-child(3){
+			transform: translateY(-8px) rotate(-45deg);
+		}
+		.nav-menu{
+			position: fixed;
+			left: -100%;
+			top: 70px;
+			gap: 0;
+			flex-direction: column;
+			background-color: #262626;
+			width: 100%;
+			opacity: 1;
+			text-align: center;
+			transition: 0.3s;
+		}
+		.nav-item{
+			margin: 16px 0;
+		}
+		.nav-menu.active{
+			left: 0;
+		}
+	}
 
 	 #snackbar {
 		visibility: hidden;
