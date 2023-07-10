@@ -203,6 +203,7 @@
 	 }
 
 	 .tapp-block-form {
+		display: flex;
 		width: 100%;
 	 }
 
@@ -218,6 +219,12 @@
   		display: flex;
   		gap: 12px;
 	 }
+	 @media screen and (max-width: 600px) {
+		.tapp-block-form-row {
+		  flex-wrap: wrap;
+		  margin-bottom: 10px;
+		}
+	}
 
 	 .tapp-block-form-standard {
 		width: 100%;
