@@ -40,7 +40,7 @@
 		padding: 10px;
 	  }
 	  .banner-img{
-		background-image: url(https://images.pexels.com/photos/3184455/pexels-photo-3184455.jpeg?auto=compress&cs=tinysrgb&w=2048&h=2048);
+		background-image: url(https://images.pexels.com/photos/273244/pexels-photo-273244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 		-webkit-background-size: cover;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -225,6 +225,12 @@
 	 .tapp-block-form {
 		width: 100%;
 	 }
+	 @media screen and (max-width: 600px) {
+		.tapp-block-form-row {
+		  flex-wrap: wrap;
+		  margin-bottom: 10px;
+		}
+	}
 
 	 .tapp-block-form-content {
 	    width: 100%;
