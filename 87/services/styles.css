@@ -46,6 +46,11 @@
 		margin: top 10px; ;
 		
 	  }
+	  .wrapper{
+		margin: 10px auto;
+		width: 90%;
+	  }
+	  
 
 	  .tapp-section-background {
 		background-size: cover;
@@ -72,6 +77,11 @@
 		display: flex;
 		gap: 16px;
 	  }
+	  .tapp-module-horizontal1 {
+		display: flex;
+  		align-items: center;
+	  }
+
 	  
 	  .tapp-module-vertical {
 		position: relative;
@@ -118,6 +128,7 @@
 	  .tapp-block-text-leaf {
 		font-family: inherit;
 		color: inherit;
+		align-items: center;
 	  }
 	  
 	  .tapp-block-text-blockquote {
@@ -204,6 +215,7 @@
 	 }
 
 	 .tapp-block-form {
+		display: flex;
 		width: 100%;
 	 }
 
@@ -219,6 +231,12 @@
   		display: flex;
   		gap: 12px;
 	 }
+	 @media screen and (max-width: 600px) {
+		.tapp-block-form-row {
+		  flex-wrap: wrap;
+		  margin-bottom: 10px;
+		}
+	}
 
 	 .tapp-block-form-standard {
 		width: 100%;
