@@ -65,6 +65,10 @@
 		display: flex;
 		gap: 16px;
 	  }
+	  .tapp-module-horizontal1 {
+		display: flex;
+		align-items: center;
+	  }
 	  
 	  .tapp-module-vertical {
 		position: relative;
@@ -200,6 +204,12 @@
 		width: 100%;
 	 }
 
+	 @media screen and (max-width: 600px) {
+		.tapp-block-form-row {
+		  flex-wrap: wrap;
+		  margin-bottom: 10px;
+		}
+	}
 	 .tapp-block-form-content {
 	    width: 100%;
 		display: flex;
@@ -400,7 +410,7 @@
 			transform: translateY(-8px) rotate(-45deg);
 		}
 		.nav-menu{
-			position: absolute;
+			position: fixed;
 			left: -100%;
 			top: 70px;
 			gap: 0;
